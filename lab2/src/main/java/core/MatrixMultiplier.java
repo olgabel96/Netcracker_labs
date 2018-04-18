@@ -2,12 +2,11 @@ package core;
 
 public class MatrixMultiplier {
 
-    private static long startTime;
-    private static long endTime;
+
     private static int THREADS_COUNT = 4;
 
     public static int[][] multiply(int[][] matrixA, int[][] matrixB){
-        startTime = System.nanoTime();
+
         int[][] result = new int[matrixA.length][matrixB[0].length];
 
         if (THREADS_COUNT > matrixA.length) {
@@ -34,8 +33,7 @@ public class MatrixMultiplier {
                 e.printStackTrace();
             }
         }
-        endTime = System.nanoTime();
-        System.out.println("Duration: " + (endTime - startTime));
+
         return result;
     }
 }

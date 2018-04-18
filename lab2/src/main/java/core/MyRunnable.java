@@ -18,7 +18,7 @@ public class MyRunnable implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Thread [ " + firstIndex + " - " + lastIndex + "] started");
+
         for (int i = firstIndex; i <= lastIndex; i++) {
             for (int j = 0; j < matrixB[0].length; j++) {
                 for (int k = 0; k < matrixB.length; k++) {
@@ -26,6 +26,6 @@ public class MyRunnable implements Runnable {
                 }
             }
         }
-        System.out.println("Thread [ " + firstIndex + " - " + lastIndex + "] finished");
+
     }
 }

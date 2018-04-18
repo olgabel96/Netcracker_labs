@@ -21,10 +21,11 @@ public class Injector {
                 field.setAccessible(true);
                 try {
                     field.set(repository, sorter);
-                    LOGGER.info("Field has been injected: " + field.getName() + " -> " + sorter.getClass().getSimpleName());
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
+                LOGGER.info("Field has been injected: " + field.getName() + " -> " + sorter.getClass().getSimpleName());
+
             }
         }
         return repository;

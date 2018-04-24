@@ -6,6 +6,8 @@ import repositories.PersonRepository;
 import sorters.impls.BubbleSorter;
 import sorters.impls.InsertionSorter;
 
+import java.io.IOException;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -33,16 +35,16 @@ public class PersonRepositoryTest {
         actual.add(p1);
         actual.add(p2);
         actual.add(p3);
-        actual.exportDataToXML();
+        actual.exportDataToXML("file.xml");
 
         PersonRepository expected = new PersonRepository();
-        expected.importDataFromXML();
+        expected.importDataFromXML("file.xml");
 
         assertArrayEquals(actual.getAll(), expected.getAll());
     }
 
     @Test
-    public void testInjection() {
+    public void testInjection() throws InstantiationException, IllegalAccessException, IOException, ClassNotFoundException {
         PersonRepository actual = (new Injector()).inject(new PersonRepository());
         assertEquals(actual.getSorter().getClass().getSimpleName(), "InsertionSorter");
     }
@@ -151,8 +153,13 @@ public class PersonRepositoryTest {
     }
 
     @Test
-    public void testBubbleSortByName() {
-        PersonRepository actual = (new Injector()).inject(new PersonRepository());
+    public void testBubbleSortByName() throws IllegalAccessException, IOException, ClassNotFoundException {
+        PersonRepository actual = null;
+        try {
+            actual = (new Injector()).inject(new PersonRepository());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
         actual.setSorter(new BubbleSorter());
         actual.add(p2);
         actual.add(p3);
@@ -170,8 +177,13 @@ public class PersonRepositoryTest {
     }
 
     @Test
-    public void testInsertionSortByBirthdate() {
-        PersonRepository actual = (new Injector()).inject(new PersonRepository());
+    public void testInsertionSortByBirthdate() throws IllegalAccessException, IOException, ClassNotFoundException {
+        PersonRepository actual = null;
+        try {
+            actual = (new Injector()).inject(new PersonRepository());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
         actual.setSorter(new InsertionSorter());
         actual.add(p1);
         actual.add(p2);

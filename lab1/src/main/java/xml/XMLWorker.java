@@ -19,9 +19,9 @@ import java.io.IOException;
 public class XMLWorker {
 
     private static final Logger LOGGER = LogManager.getLogger(XMLWorker.class);
-    private static final String PATH = "file.xml";
+   // private static final String PATH = "file.xml";
 
-    public static void toXML(PersonRepository repository) {
+    public static void toXML(PersonRepository repository, String nameFile) {
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder;
@@ -52,13 +52,13 @@ public class XMLWorker {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File(PATH));
+            StreamResult result = new StreamResult(new File(nameFile));
 
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
             transformer.transform(source, result);
 
-            LOGGER.info("Repository data has been sucessfully exported to file " + PATH);
+            LOGGER.info("Repository data has been sucessfully exported to file " + nameFile);
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -70,11 +70,12 @@ public class XMLWorker {
     }
 
 
-    public static PersonRepository fromXML() {
+    public static PersonRepository fromXML(String nameFile) {
 
         PersonRepository repository = new PersonRepository();
 
-        File fXmlFile = new File("file.xml");
+       // File fXmlFile = new File("file.xml");
+        File fXmlFile=new File(nameFile);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = null;
         try {
@@ -96,7 +97,7 @@ public class XMLWorker {
                     repository.add(p);
                 }
             }
-            LOGGER.info("Data has been succesfully imported from file " + PATH);
+            LOGGER.info("Data has been succesfully imported from file " + nameFile);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {

@@ -6,6 +6,8 @@ import repositories.CarRepository;
 import sorters.impls.BubbleSorter;
 import sorters.impls.InsertionSorter;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class CarRepositoryTest {
@@ -28,8 +30,13 @@ public class CarRepositoryTest {
     }
 
     @Test
-    public void testInjection() {
-        CarRepository actual = (new Injector()).inject(new CarRepository());
+    public void testInjection() throws IllegalAccessException, IOException, ClassNotFoundException {
+        CarRepository actual = null;
+        try {
+            actual = (new Injector()).inject(new CarRepository());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
         assertEquals(actual.getSorter().getClass().getSimpleName(), "InsertionSorter");
     }
 
@@ -107,8 +114,13 @@ public class CarRepositoryTest {
     }
 
     @Test
-    public void testBubbleSortByModel() {
-        CarRepository actual = (new Injector()).inject(new CarRepository());
+    public void testBubbleSortByModel() throws IllegalAccessException, IOException, ClassNotFoundException {
+        CarRepository actual = null;
+        try {
+            actual = (new Injector()).inject(new CarRepository());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
         actual.setSorter(new BubbleSorter());
         actual.add(p1);
         actual.add(p2);
@@ -125,8 +137,13 @@ public class CarRepositoryTest {
     }
 
     @Test
-    public void testInsertionSortByColor() {
-        CarRepository actual = (new Injector()).inject(new CarRepository());
+    public void testInsertionSortByColor() throws IllegalAccessException, IOException, ClassNotFoundException {
+        CarRepository actual = null;
+        try {
+            actual = (new Injector()).inject(new CarRepository());
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
         actual.setSorter(new InsertionSorter());
         actual.add(p1);
         actual.add(p2);

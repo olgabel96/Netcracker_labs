@@ -66,12 +66,12 @@ public class PersonRepository extends Repository<Person> {
         sorter.sort(list, size, (person1, person2) -> ((Person) person1).getDateOfBirth().compareTo(((Person) person2).getDateOfBirth()));
     }
 
-    public void exportDataToXML(){
-        XMLWorker.toXML(this);
+    public void exportDataToXML(String path){
+        XMLWorker.toXML(this, path);
     }
 
-    public void importDataFromXML(){
-        PersonRepository repository = XMLWorker.fromXML();
+    public void importDataFromXML(String path){
+        PersonRepository repository = XMLWorker.fromXML(path);
         this.setAll(repository.getAll());
     }
 }

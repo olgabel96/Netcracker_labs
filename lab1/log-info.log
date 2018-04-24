@@ -1,0 +1,27 @@
+[INFO ] 2018-04-16 19:29:07.235 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-16 19:29:54.841 [main] Person - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-16 19:30:25.708 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-16 19:30:25.738 [main] XMLWorker - Data has been succesfully imported from file file.xml
+[INFO ] 2018-04-17 19:40:33.434 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-17 19:40:33.470 [main] XMLWorker - Data has been succesfully imported from file file.xml
+[INFO ] 2018-04-17 19:53:46.919 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:53:55.757 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-17 19:53:55.794 [main] XMLWorker - Data has been succesfully imported from file file.xml
+[INFO ] 2018-04-17 19:57:30.232 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:57:30.381 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:57:30.382 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:38.831 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:38.893 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:38.894 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:55.403 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-17 19:58:55.410 [main] XMLWorker - Data has been succesfully imported from file file.xml
+[INFO ] 2018-04-17 19:58:55.537 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:55.548 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:58:55.549 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:59:52.723 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-17 19:59:52.732 [main] XMLWorker - Data has been succesfully imported from file file.xml
+[INFO ] 2018-04-17 19:59:52.828 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:59:52.835 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-17 19:59:52.837 [main] Injector - Field has been injected: sorter -> InsertionSorter
+[INFO ] 2018-04-18 17:33:24.635 [main] XMLWorker - Repository data has been sucessfully exported to file file.xml
+[INFO ] 2018-04-18 17:33:24.706 [main] XMLWorker - Data has been succesfully imported from file file.xml
